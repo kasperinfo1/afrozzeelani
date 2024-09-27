@@ -16,8 +16,6 @@
     transition: width 0.3s ease;
   }
   
- 
-
   
   /* Heading styles */
   h1.header-title {
@@ -36,14 +34,6 @@
       font-size: 20px; /* Smaller font size on mobile */
     }
   }
-  
-
-
- 
-
-
-  
- 
   
   @media screen and (max-width: 768px) {
     .sidebar {

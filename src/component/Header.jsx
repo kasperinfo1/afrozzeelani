@@ -33,6 +33,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faBell, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import "./header.css"; // Custom styling for header
+import logo from "../images/logo.png"
 
 
 const Header = ({ toggleSidebar }) => {
@@ -44,12 +45,13 @@ const Header = ({ toggleSidebar }) => {
       <button className="toggle-btn" onClick={toggleSidebar}>
         <FontAwesomeIcon icon={faBars} />
       </button>
-      <h1 className="header-title">KK Gas Agency</h1>
+      {/* <h1 className="header-title">KK Gas Agency</h1> */}
+      <img src={logo} alt="" className="header-title" style={{height:"50px"}} />
 
-      <div className="header-actions">
+      {/* <div className="header-actions">
         <FontAwesomeIcon icon={faBell} className="header-icon" onClick={()=>setProfileToggle(!profileToggle)}/>
         <FontAwesomeIcon icon={faUserCircle} className="header-icon" />
-      </div>
+      </div> */}
    
     </header>
   );
