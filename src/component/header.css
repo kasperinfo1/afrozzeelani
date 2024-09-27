@@ -1,0 +1,29 @@
+/* header.css */
+.main-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 20px; /* Padding for the header */
+
+  color: white; /* Text color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.toggle-btn {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: white; /* Icon color */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 24px; /* Icon size */
+}
+
+.header-actions {
+  display: flex; /* Flexbox for action icons */
+  align-items: center; /* Center vertically */
+}
+
+.header-icon {
+  margin-left: 15px; /* Space between icons */
+  font-size: 20px; /* Icon size */
+  cursor: pointer; /* Pointer on hover */
+}

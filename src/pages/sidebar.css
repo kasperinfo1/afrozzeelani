@@ -1,0 +1,110 @@
+/* sidebar.css */
+.sidebar {
+    width: 225px; 
+    background-color: #FFFFFF; 
+    color: white;
+    transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+    position: relative;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    z-index: 1000; /* Ensure sidebar is above other content */
+  }
+  
+  .sidebar.collapsed {
+    width: 80px; /* Collapsed width */
+    background-color: #FFFFFF; /* Background when collapsed */
+  }
+  
+  .sidebar-header {
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 11px;
+    color: #000000;
+    border-bottom: 2px solid #a9a4a9;
+  }
+  .sidebar-nav {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    margin: 5px 8px;
+  }
+  
+  .sidebar-nav li {
+    padding: 12px 25px;
+    transition: background-color 0.3s, transform 0.3s; 
+    border-radius: 5px; 
+  }
+  
+  .sidebar-label {
+    flex-grow: 1; 
+  }
+  .sidebar-nav li:hover {
+    background-color: #00006B;
+  }
+  .sidebar-nav li a :hover{
+    color: #FFFFFF;
+  }
+  
+  .sidebar-nav li a {
+    color: #545454;
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Flexbox for icon and label */
+    align-items: center; /* Center vertically */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .sidebar-nav li a .sidebar-label {
+    margin-left: 10px; /* Space between icon and label */
+  }
+  
+  .sidebar-icon {
+    margin-right: 10px; /* Space between icon and label */
+    font-size: 20px; /* Slightly larger icon size */
+    transition: transform 0.3s; /* Smooth icon transformation */
+  }
+  
+  /* Media query for sidebar responsiveness */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 70px; /* Collapsed width for mobile */
+    }
+  
+    .sidebar.collapsed {
+      width: 70px; /* Maintain collapsed state */
+    }
+  
+    .sidebar-label {
+      display: none; /* Hide labels on mobile */
+    }
+  
+    .sidebar.collapsed .sidebar-label {
+      display: none; /* Ensure labels are hidden in collapsed state */
+    }
+  
+    .sidebar-nav li {
+      justify-content: center; /* Center items in the sidebar */
+    }
+  
+    .sidebar-nav li:hover {
+      transform: none; /* No movement effect on mobile hover */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 60px; /* Further reduced width for very small screens */
+    }
+  
+    .sidebar.collapsed {
+      width: 60px; /* Maintain collapsed state */
+    }
+    
+    .sidebar-header {
+      padding: 15px; /* Reduced padding for smaller screens */
+      font-size: 18px; /* Smaller font size */
+    }
+    
+    .sidebar-icon {
+      font-size: 18px; /* Smaller icon size */
+    }
+  }
+  

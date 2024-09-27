@@ -1,0 +1,74 @@
+/* Global reset and import of fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem; /* 16px */
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Root color variables */
+:root {
+  --primaryHead: #00006B;
+  --secondaryDashColorDark: #1d1d1d;
+  --primaryDashMenuColor: #FFFFFF;
+  --secondaryDashMenuColor: #F2F2F2;
+  --basecolorTransparent: #3f94df57;
+  --basecolor: #20cfe6;
+  --basecolor1: #20b7d1;
+  --basecolor2: #25afce;
+  --basecolor3: #2597c0;
+  --basecolor4: #2b96d8;
+  --basecolor5: #2972b3;
+  --scrollbarBackground: #e0e0e0; /* Light gray background for scrollbar track */
+  --scrollbarThumb: #888; /* Darker gray for scrollbar thumb */
+  --scrollbarThumbHover: #555; /* Darker thumb color on hover */
+}
+
+/* Custom Scrollbar for WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Set width of the scrollbar */
+  height: 8px; /* Set height of the scrollbar for horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBackground); /* Track background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarThumb); /* Scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbarThumbHover); /* Darker thumb color on hover */
+}
+
+/* Custom Scrollbar for Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar for Firefox */
+  scrollbar-color: var(--scrollbarThumb) var(--scrollbarBackground); /* Thumb and track colors */
+}
+
+/* Optionally, adjust scrollbar size for overflow elements */
+.scrollable-element {
+  overflow: auto; /* Apply to any element with scrolling */
+}
+
+
+
+/* Custom column size to support 5 items per row on larger screens */
+@media (min-width: 1200px) {
+  .col-lg-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}
